@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cadastrar Produto</title>
+</head>
+<body>
+    <div>
+        <form action="recebe.php" method="POST">
+            <label for="combobox">Categoria Produto</label>
+            <select id="combobox" name="combobox[]">
+                <option value="tv">TV</option>
+                <option value="mesa">Mesa</option>
+                <option value="lavadora">Lavadora de Roupas</option>
+            </select>
+            <br><br>
+
+            <label for="nome">Nome do produto:</label>
+            <input type="text" id="nome" name="campo1">
+            <br><br>
+
+            <label for="descricao">Descrição:</label>
+            <input type="text" id="descr" name="campo2">
+            <br><br>
+
+            <label for="quantidade">Quantidade</label>
+            <input type="text" id="quantidade" name="campo3">
+            <br><br>
+            <label>Tipo do produto:</label>
+            <input type="radio" id="prod_1" name="radio" value="Eletrodomestico">
+            <label for="radio">Eletrodomestico</label>
+            <input type="radio" id="prod_2" name="radio" value="Moveis">
+            <label for="radio">Moveis</label>
+            <br><br>
+        
+            <input type="submit" name="botao" value="ENVIAR">
+            </form>
+    </div>
+</body>
+</html>
