@@ -1,19 +1,18 @@
-<?php
+<?php 
+
 
 class User {
-    public $nome;
+    public $iduser;
+    public $username;
     public $telefone;
-    public $imgPerfil;
+    public $imgprofile;
 
-    protected $senha;
+    public $password;
 
-    public function __construct($nome, $telefone, $imgPerfil, $senha )
-        {
-            $this->nome = $nome;
-            $this->telefone = $telefone;
-            $this->imgPerfil = $imgPerfil;
-            $this->senha = $senha;
+    public function __construct()        {
+
         }
+
 
 }
 

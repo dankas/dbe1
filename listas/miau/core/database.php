@@ -8,7 +8,7 @@ $port = '3308';
 $dsn = "mysql:host=$host;port=$port;dbname=$db;";
 
 try {
-    $data = new PDO($dsn, $user, $pass, [
+    $pdo = new PDO($dsn, $user, $pass, [
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
     ]);
     // Conexão bem-sucedida
