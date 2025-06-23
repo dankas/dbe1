@@ -50,17 +50,24 @@ require_once 'controllers/homecontroller.php';
     </style>
 </head>
 <body>
-    <div class="sidebar">
-        <h2>Menu</h2>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Consultas</a></li>
-            <li><a href="logout.php">Sair</a></li>
-        </ul>
-    </div>
+    <?php include 'partials/sidebar.php';?>
     <div class="main-content">
-        <h1>Bem-vindo, <?php echo $usuario->username; ?></h1>
-        <p>Este é o seu painel inicial.  <?php print_r($usuario);?></p>
+        <h1>Bem-vindo, <?php echo $users->username; ?></h1>
+        <?php
+        $section = isset($_GET['section']) ? $_GET['section'] : '';
+
+        switch ($section) {
+            case 'perfil':
+                include 'partials/perfil.php';
+                break;
+            case 'consultas':
+                include 'partials/consultas.php';
+                break;
+            default:
+                include 'partials/pets.php';
+                break;
+        }
+        ?>
 
 
     </div>

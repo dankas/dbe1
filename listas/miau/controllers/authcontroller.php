@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' ) {
     if ($user != NULL) {
         $_SESSION['userId'] = $user["iduser"];
         $_SESSION['isLogged'] = true;
-        header('Location: home.php');
+        header('Location: home.php?section=home');
         
     }
 
